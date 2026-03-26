@@ -3,6 +3,7 @@ import {connectDb} from "./config/db.js"
 import cors from "cors"
 
 import detailRoute from "./routes/detailRoute.js"
+import bookingRoute from "./routes/bookingRoute.js"
 
 import dotenv from 'dotenv'
 dotenv.config()
@@ -13,6 +14,7 @@ app.use(express.json())
 app.use(cors({credential: true}))
 
 app.use("/api/details",detailRoute)
+api.use("/api/booking",bookingRoute)
 
 connectDb()
 app.listen(PORT, (req, res) => {
