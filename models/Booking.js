@@ -1,6 +1,6 @@
 import mongoose from "mongoose"
 
-const appointmentSchema = mongoose.Schema({
+const bookingSchema = mongoose.Schema({
     name :{
         type : String,
         required : true
@@ -38,3 +38,5 @@ const appointmentSchema = mongoose.Schema({
     }
 
 })
+
+export const Booking = mongoose.model("booking", bookingSchema)
